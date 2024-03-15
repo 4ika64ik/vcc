@@ -1,0 +1,43 @@
+@mixin on-tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin on-desktop {
+  @media (min-width: 1060px) {
+    @content;
+  }
+}
+
+.container {
+  background-color: rgb(0, 0, 0, 0.85);
+  width: 100vw;
+}
+
+.carusel {
+  padding-block: 30px;
+  width: 100vw;
+
+  @include on-tablet {
+    max-width: 800px;
+    margin-inline: auto;
+  }
+}
+
+.block {
+  color: white;
+  padding: 0 20px 40px;
+  display: flex;
+  flex-direction: column;
+  text-shadow: 1px 1px 1px black;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.immg {
+  padding-bottom: 30px;
+}
